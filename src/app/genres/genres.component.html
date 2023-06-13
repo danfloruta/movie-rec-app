@@ -1,0 +1,5 @@
+<div class="container mt-4 d-flex" style="min-height: 90vh">
+    <div class="row d-flex justify-content-center">
+        <a (click)="getIdFromTemplate(genre.id)" class="card p-2 w-25 m-2 col-4 cursor-pointer"  *ngFor="let genre of genres">{{genre.name}}</a>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="container p-2">
+    <div class="row">
+<div class="col-md p-2" *ngFor="let movie of moviesWithThisGenre | paginate: { itemsPerPage: 20, currentPage: p, totalItems: totalResults } ">
+    <h4>{{movie.title}}</h4>
+    <p>{{movie.release_date.slice(0,4)}}</p>
+    <img src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" alt="{{ movie.title }} Poster" />
+</div>
+</div>
+<pagination-controls (pageChange)="changePage($event)"></pagination-controls>
+</div>
+
+
